@@ -1,0 +1,51 @@
+<div class="p-8 min-h-screen bg-background">
+  <div class="mx-auto space-y-8 max-w-5xl">
+    <header class="text-center">
+      <h1 class="mb-4 text-4xl font-bold text-red-500">{{ title }}</h1>
+      <p class="text-muted-foreground">A modern UI component library for Angular</p>
+    </header>
+
+    <section class="space-y-4">
+      <h2 class="mb-4 text-2xl font-semibold">Button Variants</h2>
+
+      <div class="grid gap-4">
+        <div class="flex gap-4 items-center">
+          <ui-button>Default Button</ui-button>
+          <ui-button variant="destructive">Destructive</ui-button>
+          <ui-button variant="outline">Outline</ui-button>
+          <ui-button variant="secondary">Secondary</ui-button>
+          <ui-button variant="ghost">Ghost</ui-button>
+          <ui-button variant="link">Link</ui-button>
+        </div>
+
+        <div class="flex gap-4 items-center">
+          <ui-button size="sm">Small</ui-button>
+          <ui-button>Default Size</ui-button>
+          <ui-button size="lg">Large</ui-button>
+        </div>
+
+        <div class="flex gap-4 items-center">
+          <!-- <ui-button disabled>Disabled</ui-button>
+          <ui-button variant="destructive" disabled>Disabled Destructive</ui-button>
+          <ui-button variant="outline" disabled>Disabled Outline</ui-button> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="mb-4 text-2xl font-semibold">Icon Buttons</h2>
+
+      <div class="flex gap-4 items-center">
+        <ui-button size="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </ui-button>
+
+        <ui-button size="icon" variant="outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+        </ui-button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<router-outlet />

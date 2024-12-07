@@ -6,7 +6,18 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postbuild": "npm run themes",
+    "themes": "bundle-scss --config",
+    "build-lib-style": "cpx \"./projects/ui-lib/src/lib/styles/**/*\" \"./dist/ui-lib/styles\" ",
+    "sitemap": "node ./projects/consumer/sitemap-creator.js"
+  },
+  "bundleStyle": {
+    "dest": "dist/ui-lib/styles/_styles.scss",
+    "mask": [
+      "./projects/ui-lib/src/lib/styles/styles.scss",
+      "./projects/ui-lib/src/lib/components/**/*.component.scss"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -18,20 +29,27 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "bundle-scss": "^1.5.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/cli": "^19.0.1",
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.4.0",
+    "autoprefixer": "^10.4.16",
+    "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.6.2"
+    "ng-packagr": "^19.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "~5.5.2"
   }
 }
